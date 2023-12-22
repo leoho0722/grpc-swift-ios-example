@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AddAlbumViewController" customModule="grpc_swift_ios_example" customModuleProvider="target">
+            <connections>
+                <outlet property="btnCreate" destination="kvD-gU-bae" id="60P-bL-UEo"/>
+                <outlet property="dpkReleaseDate" destination="tCS-bw-mpj" id="CqC-kr-4e6"/>
+                <outlet property="lbReleaseDate" destination="xIf-vK-4Wd" id="Sma-6s-nul"/>
+                <outlet property="txfAlbumArtist" destination="voD-xI-zEZ" id="wrK-Mt-vih"/>
+                <outlet property="txfAlbumName" destination="l7m-UI-3bd" id="OEx-iV-PZm"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="l7m-UI-3bd">
+                    <rect key="frame" x="20" y="109" width="353" height="34"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="voD-xI-zEZ">
+                    <rect key="frame" x="20" y="163" width="353" height="34"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vtV-Ws-S3D">
+                    <rect key="frame" x="20" y="217" width="353" height="50"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xIf-vK-4Wd">
+                            <rect key="frame" x="0.0" y="0.0" width="203" height="50"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" style="compact" translatesAutoresizingMaskIntoConstraints="NO" id="tCS-bw-mpj">
+                            <rect key="frame" x="203" y="0.0" width="150" height="50"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="150" id="4aZ-oj-62c"/>
+                            </constraints>
+                        </datePicker>
+                    </subviews>
+                    <constraints>
+                        <constraint firstItem="tCS-bw-mpj" firstAttribute="top" secondItem="vtV-Ws-S3D" secondAttribute="top" id="5kl-Ia-xca"/>
+                        <constraint firstAttribute="bottom" secondItem="tCS-bw-mpj" secondAttribute="bottom" id="5oq-3c-Omq"/>
+                        <constraint firstAttribute="trailing" secondItem="tCS-bw-mpj" secondAttribute="trailing" id="J5y-ai-kaP"/>
+                        <constraint firstItem="xIf-vK-4Wd" firstAttribute="leading" secondItem="vtV-Ws-S3D" secondAttribute="leading" id="znX-wS-vXQ"/>
+                    </constraints>
+                </stackView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kvD-gU-bae">
+                    <rect key="frame" x="20" y="287" width="353" height="50"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="Nse-Pe-cGx"/>
+                    </constraints>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="filled" title="Button"/>
+                    <connections>
+                        <action selector="btnCreateClicked:" destination="-1" eventType="touchUpInside" id="83V-l5-sq6"/>
+                    </connections>
+                </button>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="l7m-UI-3bd" secondAttribute="trailing" constant="20" id="5HG-AF-atK"/>
+                <constraint firstItem="voD-xI-zEZ" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="8ZB-Wm-arK"/>
+                <constraint firstItem="l7m-UI-3bd" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="9LP-Cs-lb1"/>
+                <constraint firstAttribute="trailing" secondItem="vtV-Ws-S3D" secondAttribute="trailing" constant="20" id="ByZ-ZM-uVV"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="kvD-gU-bae" secondAttribute="trailing" constant="20" id="IvU-HD-8YO"/>
+                <constraint firstItem="vtV-Ws-S3D" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="SCP-BO-Cb6"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="voD-xI-zEZ" secondAttribute="trailing" constant="20" id="Uc7-YQ-5gk"/>
+                <constraint firstItem="kvD-gU-bae" firstAttribute="top" secondItem="vtV-Ws-S3D" secondAttribute="bottom" constant="20" id="ifc-JE-7od"/>
+                <constraint firstItem="vtV-Ws-S3D" firstAttribute="top" secondItem="voD-xI-zEZ" secondAttribute="bottom" constant="20" id="ov8-Ph-osl"/>
+                <constraint firstItem="voD-xI-zEZ" firstAttribute="top" secondItem="l7m-UI-3bd" secondAttribute="bottom" constant="20" id="qZK-Tq-9c9"/>
+                <constraint firstItem="kvD-gU-bae" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="r9y-NT-w8C"/>
+                <constraint firstItem="l7m-UI-3bd" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="50" id="vqX-ta-khy"/>
+            </constraints>
+            <point key="canvasLocation" x="137" y="20"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

@@ -1,0 +1,554 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		D084721B2B35B7B000894DA3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D084721A2B35B7B000894DA3 /* AppDelegate.swift */; };
+		D084721D2B35B7B000894DA3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D084721C2B35B7B000894DA3 /* SceneDelegate.swift */; };
+		D08472242B35B7B100894DA3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D08472232B35B7B100894DA3 /* Assets.xcassets */; };
+		D08472272B35B7B100894DA3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D08472252B35B7B100894DA3 /* LaunchScreen.storyboard */; };
+		D08472362B35B89300894DA3 /* AlbumListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D08472342B35B89300894DA3 /* AlbumListViewController.swift */; };
+		D08472372B35B89300894DA3 /* AlbumListViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D08472352B35B89300894DA3 /* AlbumListViewController.xib */; };
+		D084723B2B35B9EC00894DA3 /* SwiftHelpers in Frameworks */ = {isa = PBXBuildFile; productRef = D084723A2B35B9EC00894DA3 /* SwiftHelpers */; };
+		D084723E2B35BB7300894DA3 /* AlbumListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D084723C2B35BB7300894DA3 /* AlbumListTableViewCell.swift */; };
+		D084723F2B35BB7300894DA3 /* AlbumListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D084723D2B35BB7300894DA3 /* AlbumListTableViewCell.xib */; };
+		D08472412B35C99E00894DA3 /* Album.swift in Sources */ = {isa = PBXBuildFile; fileRef = D08472402B35C99E00894DA3 /* Album.swift */; };
+		D08472552B35CDC800894DA3 /* album.proto in Sources */ = {isa = PBXBuildFile; fileRef = D08472542B35CDC800894DA3 /* album.proto */; };
+		D08472592B35D2FC00894DA3 /* album.grpc.swift in Sources */ = {isa = PBXBuildFile; fileRef = D08472572B35D2FC00894DA3 /* album.grpc.swift */; };
+		D084725A2B35D2FC00894DA3 /* album.pb.swift in Sources */ = {isa = PBXBuildFile; fileRef = D08472582B35D2FC00894DA3 /* album.pb.swift */; };
+		D084725D2B35D40200894DA3 /* CGRPCZlib in Frameworks */ = {isa = PBXBuildFile; productRef = D084725C2B35D40200894DA3 /* CGRPCZlib */; };
+		D084725F2B35D40200894DA3 /* GRPC in Frameworks */ = {isa = PBXBuildFile; productRef = D084725E2B35D40200894DA3 /* GRPC */; };
+		D08472612B35D40200894DA3 /* GRPCReflectionService in Frameworks */ = {isa = PBXBuildFile; productRef = D08472602B35D40200894DA3 /* GRPCReflectionService */; };
+		D08472632B35D40200894DA3 /* _GRPCCore in Frameworks */ = {isa = PBXBuildFile; productRef = D08472622B35D40200894DA3 /* _GRPCCore */; };
+		D08472652B35D40200894DA3 /* protoc-gen-grpc-swift in Frameworks */ = {isa = PBXBuildFile; productRef = D08472642B35D40200894DA3 /* protoc-gen-grpc-swift */; };
+		D08472672B35D4EC00894DA3 /* AlbumServices.swift in Sources */ = {isa = PBXBuildFile; fileRef = D08472662B35D4EC00894DA3 /* AlbumServices.swift */; };
+		D084726A2B35D58C00894DA3 /* AddAlbumViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D08472682B35D58C00894DA3 /* AddAlbumViewController.swift */; };
+		D084726B2B35D58C00894DA3 /* AddAlbumViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = D08472692B35D58C00894DA3 /* AddAlbumViewController.xib */; };
+		D08472702B35E13400894DA3 /* Date+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D084726F2B35E13400894DA3 /* Date+Extensions.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		D08472172B35B7B000894DA3 /* grpc-swift-ios-example.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "grpc-swift-ios-example.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D084721A2B35B7B000894DA3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		D084721C2B35B7B000894DA3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		D08472232B35B7B100894DA3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		D08472262B35B7B100894DA3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		D08472282B35B7B100894DA3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D08472342B35B89300894DA3 /* AlbumListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumListViewController.swift; sourceTree = "<group>"; };
+		D08472352B35B89300894DA3 /* AlbumListViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AlbumListViewController.xib; sourceTree = "<group>"; };
+		D084723C2B35BB7300894DA3 /* AlbumListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumListTableViewCell.swift; sourceTree = "<group>"; };
+		D084723D2B35BB7300894DA3 /* AlbumListTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AlbumListTableViewCell.xib; sourceTree = "<group>"; };
+		D08472402B35C99E00894DA3 /* Album.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Album.swift; sourceTree = "<group>"; };
+		D08472542B35CDC800894DA3 /* album.proto */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.protobuf; path = album.proto; sourceTree = "<group>"; };
+		D08472572B35D2FC00894DA3 /* album.grpc.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = album.grpc.swift; sourceTree = "<group>"; };
+		D08472582B35D2FC00894DA3 /* album.pb.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = album.pb.swift; sourceTree = "<group>"; };
+		D08472662B35D4EC00894DA3 /* AlbumServices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumServices.swift; sourceTree = "<group>"; };
+		D08472682B35D58C00894DA3 /* AddAlbumViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddAlbumViewController.swift; sourceTree = "<group>"; };
+		D08472692B35D58C00894DA3 /* AddAlbumViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddAlbumViewController.xib; sourceTree = "<group>"; };
+		D084726F2B35E13400894DA3 /* Date+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Extensions.swift"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D08472142B35B7B000894DA3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D08472612B35D40200894DA3 /* GRPCReflectionService in Frameworks */,
+				D084725F2B35D40200894DA3 /* GRPC in Frameworks */,
+				D084725D2B35D40200894DA3 /* CGRPCZlib in Frameworks */,
+				D08472652B35D40200894DA3 /* protoc-gen-grpc-swift in Frameworks */,
+				D08472632B35D40200894DA3 /* _GRPCCore in Frameworks */,
+				D084723B2B35B9EC00894DA3 /* SwiftHelpers in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		D084720E2B35B7B000894DA3 = {
+			isa = PBXGroup;
+			children = (
+				D08472192B35B7B000894DA3 /* grpc-swift-ios-example */,
+				D08472182B35B7B000894DA3 /* Products */,
+				D08472712B35E61200894DA3 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		D08472182B35B7B000894DA3 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D08472172B35B7B000894DA3 /* grpc-swift-ios-example.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D08472192B35B7B000894DA3 /* grpc-swift-ios-example */ = {
+			isa = PBXGroup;
+			children = (
+				D08472282B35B7B100894DA3 /* Info.plist */,
+				D084721A2B35B7B000894DA3 /* AppDelegate.swift */,
+				D084721C2B35B7B000894DA3 /* SceneDelegate.swift */,
+				D08472252B35B7B100894DA3 /* LaunchScreen.storyboard */,
+				D08472312B35B85200894DA3 /* Services */,
+				D08472302B35B83400894DA3 /* Models */,
+				D084722E2B35B80700894DA3 /* Controllers */,
+				D084722F2B35B81500894DA3 /* Resources */,
+			);
+			path = "grpc-swift-ios-example";
+			sourceTree = "<group>";
+		};
+		D084722E2B35B80700894DA3 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				D08472332B35B87200894DA3 /* AddAlbum */,
+				D08472322B35B85E00894DA3 /* AlbumList */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		D084722F2B35B81500894DA3 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				D08472232B35B7B100894DA3 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		D08472302B35B83400894DA3 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				D084726E2B35E12200894DA3 /* Extensions */,
+				D08472402B35C99E00894DA3 /* Album.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		D08472312B35B85200894DA3 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				D08472562B35CF6100894DA3 /* proto */,
+				D08472662B35D4EC00894DA3 /* AlbumServices.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		D08472322B35B85E00894DA3 /* AlbumList */ = {
+			isa = PBXGroup;
+			children = (
+				D08472342B35B89300894DA3 /* AlbumListViewController.swift */,
+				D08472352B35B89300894DA3 /* AlbumListViewController.xib */,
+				D08472382B35B96300894DA3 /* Components */,
+			);
+			path = AlbumList;
+			sourceTree = "<group>";
+		};
+		D08472332B35B87200894DA3 /* AddAlbum */ = {
+			isa = PBXGroup;
+			children = (
+				D08472682B35D58C00894DA3 /* AddAlbumViewController.swift */,
+				D08472692B35D58C00894DA3 /* AddAlbumViewController.xib */,
+			);
+			path = AddAlbum;
+			sourceTree = "<group>";
+		};
+		D08472382B35B96300894DA3 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				D084723C2B35BB7300894DA3 /* AlbumListTableViewCell.swift */,
+				D084723D2B35BB7300894DA3 /* AlbumListTableViewCell.xib */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		D08472562B35CF6100894DA3 /* proto */ = {
+			isa = PBXGroup;
+			children = (
+				D08472572B35D2FC00894DA3 /* album.grpc.swift */,
+				D08472582B35D2FC00894DA3 /* album.pb.swift */,
+				D08472542B35CDC800894DA3 /* album.proto */,
+			);
+			path = proto;
+			sourceTree = "<group>";
+		};
+		D084726E2B35E12200894DA3 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				D084726F2B35E13400894DA3 /* Date+Extensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		D08472712B35E61200894DA3 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		D08472162B35B7B000894DA3 /* grpc-swift-ios-example */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D084722B2B35B7B100894DA3 /* Build configuration list for PBXNativeTarget "grpc-swift-ios-example" */;
+			buildPhases = (
+				D08472132B35B7B000894DA3 /* Sources */,
+				D08472142B35B7B000894DA3 /* Frameworks */,
+				D08472152B35B7B000894DA3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "grpc-swift-ios-example";
+			packageProductDependencies = (
+				D084723A2B35B9EC00894DA3 /* SwiftHelpers */,
+				D084725C2B35D40200894DA3 /* CGRPCZlib */,
+				D084725E2B35D40200894DA3 /* GRPC */,
+				D08472602B35D40200894DA3 /* GRPCReflectionService */,
+				D08472622B35D40200894DA3 /* _GRPCCore */,
+				D08472642B35D40200894DA3 /* protoc-gen-grpc-swift */,
+			);
+			productName = "grpc-swift-ios-example";
+			productReference = D08472172B35B7B000894DA3 /* grpc-swift-ios-example.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D084720F2B35B7B000894DA3 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1510;
+				LastUpgradeCheck = 1510;
+				TargetAttributes = {
+					D08472162B35B7B000894DA3 = {
+						CreatedOnToolsVersion = 15.1;
+					};
+				};
+			};
+			buildConfigurationList = D08472122B35B7B000894DA3 /* Build configuration list for PBXProject "grpc-swift-ios-example" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = D084720E2B35B7B000894DA3;
+			packageReferences = (
+				D08472392B35B9EC00894DA3 /* XCRemoteSwiftPackageReference "SwiftHelpers" */,
+				D084725B2B35D40200894DA3 /* XCRemoteSwiftPackageReference "grpc-swift" */,
+			);
+			productRefGroup = D08472182B35B7B000894DA3 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D08472162B35B7B000894DA3 /* grpc-swift-ios-example */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D08472152B35B7B000894DA3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D08472272B35B7B100894DA3 /* LaunchScreen.storyboard in Resources */,
+				D08472242B35B7B100894DA3 /* Assets.xcassets in Resources */,
+				D084726B2B35D58C00894DA3 /* AddAlbumViewController.xib in Resources */,
+				D08472372B35B89300894DA3 /* AlbumListViewController.xib in Resources */,
+				D084723F2B35BB7300894DA3 /* AlbumListTableViewCell.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D08472132B35B7B000894DA3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D08472672B35D4EC00894DA3 /* AlbumServices.swift in Sources */,
+				D08472702B35E13400894DA3 /* Date+Extensions.swift in Sources */,
+				D08472552B35CDC800894DA3 /* album.proto in Sources */,
+				D084721B2B35B7B000894DA3 /* AppDelegate.swift in Sources */,
+				D084725A2B35D2FC00894DA3 /* album.pb.swift in Sources */,
+				D08472362B35B89300894DA3 /* AlbumListViewController.swift in Sources */,
+				D084721D2B35B7B000894DA3 /* SceneDelegate.swift in Sources */,
+				D084726A2B35D58C00894DA3 /* AddAlbumViewController.swift in Sources */,
+				D084723E2B35BB7300894DA3 /* AlbumListTableViewCell.swift in Sources */,
+				D08472412B35C99E00894DA3 /* Album.swift in Sources */,
+				D08472592B35D2FC00894DA3 /* album.grpc.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		D08472252B35B7B100894DA3 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D08472262B35B7B100894DA3 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		D08472292B35B7B100894DA3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		D084722A2B35B7B100894DA3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		D084722C2B35B7B100894DA3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 23JEQ2524P;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "grpc-swift-ios-example/Info.plist";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.leoho.grpc-swift-ios-example";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		D084722D2B35B7B100894DA3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 23JEQ2524P;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "grpc-swift-ios-example/Info.plist";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.leoho.grpc-swift-ios-example";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D08472122B35B7B000894DA3 /* Build configuration list for PBXProject "grpc-swift-ios-example" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D08472292B35B7B100894DA3 /* Debug */,
+				D084722A2B35B7B100894DA3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D084722B2B35B7B100894DA3 /* Build configuration list for PBXNativeTarget "grpc-swift-ios-example" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D084722C2B35B7B100894DA3 /* Debug */,
+				D084722D2B35B7B100894DA3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		D08472392B35B9EC00894DA3 /* XCRemoteSwiftPackageReference "SwiftHelpers" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/leoho0722/SwiftHelpers.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.0.12;
+			};
+		};
+		D084725B2B35D40200894DA3 /* XCRemoteSwiftPackageReference "grpc-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/grpc/grpc-swift";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.21.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		D084723A2B35B9EC00894DA3 /* SwiftHelpers */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D08472392B35B9EC00894DA3 /* XCRemoteSwiftPackageReference "SwiftHelpers" */;
+			productName = SwiftHelpers;
+		};
+		D084725C2B35D40200894DA3 /* CGRPCZlib */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D084725B2B35D40200894DA3 /* XCRemoteSwiftPackageReference "grpc-swift" */;
+			productName = CGRPCZlib;
+		};
+		D084725E2B35D40200894DA3 /* GRPC */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D084725B2B35D40200894DA3 /* XCRemoteSwiftPackageReference "grpc-swift" */;
+			productName = GRPC;
+		};
+		D08472602B35D40200894DA3 /* GRPCReflectionService */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D084725B2B35D40200894DA3 /* XCRemoteSwiftPackageReference "grpc-swift" */;
+			productName = GRPCReflectionService;
+		};
+		D08472622B35D40200894DA3 /* _GRPCCore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D084725B2B35D40200894DA3 /* XCRemoteSwiftPackageReference "grpc-swift" */;
+			productName = _GRPCCore;
+		};
+		D08472642B35D40200894DA3 /* protoc-gen-grpc-swift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D084725B2B35D40200894DA3 /* XCRemoteSwiftPackageReference "grpc-swift" */;
+			productName = "protoc-gen-grpc-swift";
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = D084720F2B35B7B000894DA3 /* Project object */;
+}
